@@ -9,7 +9,7 @@ public:
             {
                 return{mapOfVecIndices[target-numbers[i]]+1, i+1}; //return the indices of elements that sum upto target
             }
-            mapOfVecIndices.insert(pair<int,int>(numbers[i],i)); //else insert the index into map with element in vec as key
+            mapOfVecIndices[numbers[i]]=i; //else insert the index into map with element in vec as key
         } 
         return {}; //return empty if elements don't sum to target
     }
