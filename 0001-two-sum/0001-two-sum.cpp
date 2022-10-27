@@ -10,7 +10,8 @@ public:
             {
                 return{mapOfVecIndices[target-nums[i]], i}; //return the indices of elements that sum upto target
             }
-            mapOfVecIndices[nums[i]]=i; //else insert the index into map with element in vec as key
+            //mapOfVecIndices[nums[i]]=i; 
+            mapOfVecIndices.insert(pair<int, int>(nums[i],i));//else insert the index into map with element in vec as key
         } 
         return {};
     }
