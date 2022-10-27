@@ -4,11 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        l=len(nums)
-        if (l < 2):
+        sizeofInput=len(nums)
+        if (sizeofInput < 2):
             return False
         nums.sort()
-        for i in range(l-1):
-            if nums[i] == nums[i+1]:
+        for i in range(sizeofInput-1):
+            j = i+1
+            if nums[i] == nums[j]:
                 return True
         return False
